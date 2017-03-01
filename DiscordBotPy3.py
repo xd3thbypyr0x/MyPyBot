@@ -9,7 +9,8 @@ import json
 import discord.opus
 from ctypes.util import find_library
 import opuslib
-import botpassword
+#import botpassword
+#this is a local file with my token
 import logging
 #from opus_loader import load_opus_lib
 #load_opus_lib()
@@ -168,4 +169,4 @@ async def on_message(message):
             await client.send_message(message.channel, "This command doesn't exist / you're not allowed to use it. Fuck off.")
 """
 #Mass commented out ^^^
-client.run('ejensenmet@gmail.com', 'rawrrawr')
+client.run(#credentials)
