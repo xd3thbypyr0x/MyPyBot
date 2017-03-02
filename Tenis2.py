@@ -18,7 +18,7 @@ while attempt < total:
             person2 = []
             serves = 0
             attempt = attempt + 1
-        elif len(person1) < 1and len(person2) == 2:
+        elif len(person1) < and len(person2) == 2:
             person2win.append(number)
             person1 = []
             person2 = []
