@@ -4,7 +4,7 @@ person1win = []
 person2 = []
 person2win = []
 attempt = 0
-total = 200
+total = 30
 serves = 0
 
 while attempt < total:
@@ -35,10 +35,10 @@ while attempt < total:
                 serves = serves + 1
 
 
-    print("Person 1 ",len(person1))
+    """print("Person 1 ",len(person1))
     print("Person 2 ",len(person2))
     print("Person 1 Wins ", len(person1win))
-    print("Person 2 Wins ",len(person2win))
+    print("Person 2 Wins ",len(person2win))"""
     number = random.uniform(0,1)
     if len(person1) == 4 and len(person2) < 3:
         person1win.append(number)
@@ -60,7 +60,7 @@ while attempt < total:
             person2.append(number)
             serves = serves + 1
     elif len(person1) == 3 and len(person2) == 3:
-        print("Deuce")
+        #print("Deuce")
         number = random.uniform(0,1)
         person1 = []
         person2 = []
@@ -93,3 +93,20 @@ while attempt < total:
         elif number > 0.67:
             person2.append(number)
             serves = serves + 1
+
+
+print("Person 1 has won ", len(person1win), "games.")
+print("Person 2 has won ", len(person2win), "games.")
+print("You will have won $", len(person1win) * 3)
+print("You will have lost $", len(person2win) * 10)
+
+
+if len(person1win) * 3 > len(person2win) * 10:
+    person11 = len(person1win) * 3
+    person22 = len(person2win) * 10
+    print("You should take the bet. You will win roughly $", person11 - person22)
+
+elif len(person1win) * 3 < len(person2win) * 10:
+    person11 = len(person1win) * 3
+    person22 = len(person2win) * 10
+    print("You should not take the bet. You will loose roughly $", person22 - person11)
